@@ -1,0 +1,4 @@
+C:\Users\Gabriel\source\repos\xadrez\xadrez\obj\Debug\netcoreapp3.1\xadrez.csprojAssemblyReference.cache
+C:\Users\Gabriel\source\repos\xadrez\xadrez\obj\Debug\netcoreapp3.1\xadrez.AssemblyInfoInputs.cache
+C:\Users\Gabriel\source\repos\xadrez\xadrez\obj\Debug\netcoreapp3.1\xadrez.AssemblyInfo.cs
+C:\Users\Gabriel\source\repos\xadrez\xadrez\obj\Debug\netcoreapp3.1\xadrez.csproj.CoreCompileInputs.cache
