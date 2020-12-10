@@ -1,6 +1,6 @@
 ﻿namespace xadrez.tab
 {
-    public class Peca
+    abstract class Peca
     {
         public Posicao Posicao { get; set; }
         public Cor Cor { get; protected set; }
@@ -15,8 +15,36 @@
             QuantidadeMovimentos = 0;
         }
 
+        public void IncrementarQuantidadeMovimentos()
+        {
+            QuantidadeMovimentos++;
+        }
 
+        public void DecrementarQuantidadeMovimentos()
+        {
+            QuantidadeMovimentos--;
+        }
 
+        public bool ExisteMovimentosPossiveis()
+        {
+            bool[,] mat = MovimentosPossiveis();
+            for (int i = 0; i < Tabuleiro.Linhas; i++)
+            {
+                for (int j = 0; j < Tabuleiro.Colunas; j++)
+                {
+                    if (mat[i, j])
+                        return true;
+                }
+            }
+            return false;
+        }
+
+        public bool MovimentoPossivel(Posicao posicao)
+        {
+            return MovimentosPossiveis()[posicao.Linha, posicao.Coluna];
+        }
+
+        public abstract bool[,] MovimentosPossiveis();
 
     }
 }

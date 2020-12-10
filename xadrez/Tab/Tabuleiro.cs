@@ -2,28 +2,28 @@
 
 namespace xadrez.tab
 {
-    public class Tabuleiro
+    class Tabuleiro
     {
         public int Linhas { get; set; }
         public int Colunas { get; set; }
 
-        private Peca[,] pecas;
+        private Peca[,] Pecas;
 
         public Tabuleiro(int linhas, int colunas)
         {
             Linhas = linhas;
             Colunas = colunas;
-            pecas = new Peca[Linhas, Colunas];
+            Pecas = new Peca[Linhas, Colunas];
         }
 
         public Peca Peca (int linha, int coluna)
         {
-            return pecas[linha, coluna];
+            return Pecas[linha, coluna];
         }
 
         public Peca Peca(Posicao posicao)
         {
-            return pecas[posicao.Linha, posicao.Coluna];
+            return Pecas[posicao.Linha, posicao.Coluna];
         }
 
         public bool ExistePeca(Posicao posicao)
@@ -37,8 +37,19 @@ namespace xadrez.tab
             if (ExistePeca(posicao))
                 throw new TabuleiroException("Já existe uma peça nessa posição!");
 
-            pecas[posicao.Linha, posicao.Coluna] = peca;
+            Pecas[posicao.Linha, posicao.Coluna] = peca;
             peca.Posicao = posicao;
+        }
+
+        public Peca RetirarPeca(Posicao posicao)
+        {
+            if (Peca(posicao) == null)
+                return null;
+
+            Peca auxiliar = Peca(posicao);
+            auxiliar.Posicao = null;
+            Pecas[posicao.Linha, posicao.Coluna] = null;
+            return auxiliar;
         }
 
         public bool PosicaoValida(Posicao posicao)
