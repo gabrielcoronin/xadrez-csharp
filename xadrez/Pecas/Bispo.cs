@@ -2,22 +2,21 @@
 
 namespace xadrez.Pecas
 {
-    class Torre : Peca
+    class Bispo : Peca
     {
-
-        public Torre(Tabuleiro Tabuleiro, Cor Cor) : base(Tabuleiro, Cor)
+        public Bispo(Tabuleiro tab, Cor cor) : base(tab, cor)
         {
         }
 
         public override string ToString()
         {
-            return "T";
+            return "B";
         }
 
         private bool PodeMover(Posicao posicao)
         {
-            Peca p = Tabuleiro.Peca(posicao);
-            return p == null || p.Cor != Cor;
+            Peca peca = Tabuleiro.Peca(posicao);
+            return peca == null || peca.Cor != Cor;
         }
 
         public override bool[,] MovimentosPossiveis()
@@ -26,8 +25,8 @@ namespace xadrez.Pecas
 
             Posicao posicao = new Posicao(0, 0);
 
-            // UP
-            posicao.DefinirValores(Posicao.Linha - 1, Posicao.Coluna);
+            // NO
+            posicao.DefinirValores(posicao.Linha - 1, posicao.Coluna - 1);
             while (Tabuleiro.PosicaoValida(posicao) && PodeMover(posicao))
             {
                 mat[posicao.Linha, posicao.Coluna] = true;
@@ -35,11 +34,11 @@ namespace xadrez.Pecas
                 {
                     break;
                 }
-                posicao.Linha = posicao.Linha - 1;
+                posicao.DefinirValores(posicao.Linha - 1, posicao.Coluna - 1);
             }
 
-            // DOWN
-            posicao.DefinirValores(Posicao.Linha + 1, Posicao.Coluna);
+            // NE
+            posicao.DefinirValores(posicao.Linha - 1, posicao.Coluna + 1);
             while (Tabuleiro.PosicaoValida(posicao) && PodeMover(posicao))
             {
                 mat[posicao.Linha, posicao.Coluna] = true;
@@ -47,11 +46,11 @@ namespace xadrez.Pecas
                 {
                     break;
                 }
-                posicao.Linha = posicao.Linha + 1;
+                posicao.DefinirValores(posicao.Linha - 1, posicao.Coluna + 1);
             }
 
-            // RIGHT
-            posicao.DefinirValores(Posicao.Linha, Posicao.Coluna + 1);
+            // SE
+            posicao.DefinirValores(posicao.Linha + 1, posicao.Coluna + 1);
             while (Tabuleiro.PosicaoValida(posicao) && PodeMover(posicao))
             {
                 mat[posicao.Linha, posicao.Coluna] = true;
@@ -59,11 +58,11 @@ namespace xadrez.Pecas
                 {
                     break;
                 }
-                posicao.Coluna = posicao.Coluna + 1;
+                posicao.DefinirValores(posicao.Linha + 1, posicao.Coluna + 1);
             }
 
-            // LEFT
-            posicao.DefinirValores(Posicao.Linha, Posicao.Coluna - 1);
+            // SO
+            posicao.DefinirValores(posicao.Linha + 1, posicao.Coluna - 1);
             while (Tabuleiro.PosicaoValida(posicao) && PodeMover(posicao))
             {
                 mat[posicao.Linha, posicao.Coluna] = true;
@@ -71,7 +70,7 @@ namespace xadrez.Pecas
                 {
                     break;
                 }
-                posicao.Coluna = posicao.Coluna - 1;
+                posicao.DefinirValores(posicao.Linha + 1, posicao.Coluna - 1);
             }
 
             return mat;

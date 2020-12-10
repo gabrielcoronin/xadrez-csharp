@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using xadrez.tab;
+﻿using xadrez.tab;
 
 namespace xadrez.Pecas
 {
@@ -16,7 +13,7 @@ namespace xadrez.Pecas
             Linha = linha;
         }
 
-        public PosicaoXadrez ToPosicao()
+        public Posicao ToPosicao()
         {
             return new Posicao(8 - Linha, Coluna - 'a');
         }
@@ -25,7 +22,6 @@ namespace xadrez.Pecas
         {
             return $" + {Coluna} + {Linha} ";
         }
-
 
     }
 }

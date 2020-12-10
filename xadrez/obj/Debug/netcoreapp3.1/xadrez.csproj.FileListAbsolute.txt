@@ -1,4 +1,12 @@
-C:\Users\Gabriel\source\repos\xadrez\xadrez\obj\Debug\netcoreapp3.1\xadrez.csprojAssemblyReference.cache
 C:\Users\Gabriel\source\repos\xadrez\xadrez\obj\Debug\netcoreapp3.1\xadrez.AssemblyInfoInputs.cache
 C:\Users\Gabriel\source\repos\xadrez\xadrez\obj\Debug\netcoreapp3.1\xadrez.AssemblyInfo.cs
 C:\Users\Gabriel\source\repos\xadrez\xadrez\obj\Debug\netcoreapp3.1\xadrez.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\source\repos\xadrez\xadrez\bin\Debug\netcoreapp3.1\xadrez.exe
+C:\Users\Gabriel\source\repos\xadrez\xadrez\bin\Debug\netcoreapp3.1\xadrez.deps.json
+C:\Users\Gabriel\source\repos\xadrez\xadrez\bin\Debug\netcoreapp3.1\xadrez.runtimeconfig.json
+C:\Users\Gabriel\source\repos\xadrez\xadrez\bin\Debug\netcoreapp3.1\xadrez.runtimeconfig.dev.json
+C:\Users\Gabriel\source\repos\xadrez\xadrez\bin\Debug\netcoreapp3.1\xadrez.dll
+C:\Users\Gabriel\source\repos\xadrez\xadrez\bin\Debug\netcoreapp3.1\xadrez.pdb
+C:\Users\Gabriel\source\repos\xadrez\xadrez\obj\Debug\netcoreapp3.1\xadrez.dll
+C:\Users\Gabriel\source\repos\xadrez\xadrez\obj\Debug\netcoreapp3.1\xadrez.pdb
+C:\Users\Gabriel\source\repos\xadrez\xadrez\obj\Debug\netcoreapp3.1\xadrez.genruntimeconfig.cache
